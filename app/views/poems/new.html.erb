@@ -1,0 +1,12 @@
+<h1>Poems#new</h1>
+<p>Find me in app/views/poems/new.html.erb</p>
+
+<%= form_for @poem do |f| %>
+  <%= f.label :写真 %>
+  <%= f.attachment_field :image %>
+  
+  <%= f.label :詩 %>
+  <%= f.text_area :body %>
+ 
+  <%= f.submit %>
+<% end %>
