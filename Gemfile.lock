@@ -101,6 +101,8 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-sass (6.1.2)
+      sassc (~> 2.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     http-accept (1.7.0)
@@ -266,6 +268,7 @@ DEPENDENCIES
   byebug (= 11.0.1)
   capybara (= 3.28.0)
   devise
+  font-awesome-sass
   jbuilder (= 2.9.1)
   listen (= 3.1.5)
   puma (= 4.3.6)

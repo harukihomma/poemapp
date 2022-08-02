@@ -7,12 +7,15 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
   </head>
 
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "sample app", root_path, id: "logo" %>
+        <%= link_to root_path, class: "btn text-white" do %>
+          <i class="fa-duotone fa-trees"></i>
+        <% end %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "poems",  poems_path  %></li>
