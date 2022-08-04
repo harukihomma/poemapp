@@ -1,6 +1,18 @@
-<h1>This is top View .</h1>
-<p>
-  You can see poems .<br>
-  Pleace enjoy .Thank you.
-</p>
+<% if user_signed_in? %>
+  <h1>
+      This is poem and picture servise.<br>
+       Please enjoy this application.
+  </h1>
+  
+  <%= link_to "ポエム一覧",  poems_path  %>
+  <%= link_to "ポエムを投稿",  new_poem_path  %>
+<% else %>
+  <h1>This is top View .</h1>
+  <p>
+    You can see poems .<br>
+    Pleace enjoy .Thank you.
+  </p>
 <%= link_to "登録せずにpoemを見る" "#" %>
+<% end %>
+
+
