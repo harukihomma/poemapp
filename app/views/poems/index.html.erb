@@ -5,4 +5,17 @@
   <%= attachment_image_tag poem, :image, format: 'jpeg', size: "400x400" %>
   <%= poem.body %>
   <%= poem.created_at.strftime("%Y-%m-%d %H:%M") %>
+
+
+  <% if current_user.already_favorited?(poem) %>
+    <%= link_to poem_favorites_path(poem), method: :delete do %>
+      <i class="fas fa-heart"></i>
+    <% end %>
+    <%= poem.favorites.count %>
+  <% else %>
+    <%= link_to poem_favorites_path(poem), method: :post do %>
+      <i class="far fa-heart"></i>
+    <% end %>
+    <%= poem.favorites.count %>
+  <% end %>
 <% end %>
