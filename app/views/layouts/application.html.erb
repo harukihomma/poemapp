@@ -12,17 +12,26 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+ 
+    
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <%= link_to "poem app", root_path, id: "logo" %>
-        <nav>
+        
+        <% if user_signed_in? %>
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "poems",  poems_path  %></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </nav>
+        <% else %>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "poems",  poems_path  %></li>
             <li><%= link_to "登録",  new_user_registration_path %></li>
             <li><%= link_to "Log in", user_session_path %></li>
-            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           </ul>
-        </nav>
+        <% end %>
+        
       </div>
     </header>
     <%= yield %>
