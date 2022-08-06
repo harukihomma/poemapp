@@ -1,2 +1,24 @@
-<h1>Poems#show</h1>
-<p>Find me in app/views/poems/show.html.erb</p>
+<div class = "message">※登録、入室後は自分で作詞、又いいねが押せます。</div>
+  
+
+
+
+<% @poems.each do |poem| %>
+  <div class="card mb-3" style="max-width: 2000px">
+      <div class="row no-gutters">
+          <div class=" col-md-4 my-auto">
+              <%= attachment_image_tag poem, :image, format: 'jpeg', size: "380x400" %>
+          </div>
+          <div class="col-md-8">
+              <div class="text-body card-body">
+                  <p><%= poem.body %></p>
+                  <h5><%= poem.created_at.strftime("%Y-%m-%d") %></h5>
+                  <div class = "fav">
+                    <i class="far fa-heart"></i>
+                    <%= poem.favorites.count %>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<% end %>

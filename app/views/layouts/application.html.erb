@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
   </head>
 
   <body>
@@ -17,18 +18,18 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <% if user_signed_in? %>
-          <%= link_to "poem app", root_path, id: "logo" %>
+          <%= link_to "風景と詩", root_path, id: "logo" %>
           <nav>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "poems",  poems_path  %></li>
-              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to "作詩",  new_poem_path  %></li>
+              <li><%= link_to "退出", destroy_user_session_path, method: :delete %></li>
             </ul>
           </nav>
         <% else %>
-          <%= link_to "poem app", home_path, id: "logo" %>
+          <%= link_to "風景と詩", home_path, id: "logo" %>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "登録",  new_user_registration_path %></li>
-            <li><%= link_to "Log in", user_session_path %></li>
+            <li><%= link_to "入室", user_session_path %></li>
           </ul>
         <% end %>
         

@@ -1,21 +1,39 @@
-<h1>Poems#index</h1>
-<p>Find me in app/views/poems/index.html.erb</p>
+
+
+
+  
+  
+  
+
+
+  
+
 
 <% @poems.each do |poem| %>
-  <%= attachment_image_tag poem, :image, format: 'jpeg', size: "400x400" %>
-  <%= poem.body %>
-  <%= poem.created_at.strftime("%Y-%m-%d %H:%M") %>
-
-
-  <% if current_user.already_favorited?(poem) %>
-    <%= link_to poem_favorites_path(poem), method: :delete do %>
-      <i class="fas fa-heart"></i>
-    <% end %>
-    <%= poem.favorites.count %>
-  <% else %>
-    <%= link_to poem_favorites_path(poem), method: :post do %>
-      <i class="far fa-heart"></i>
-    <% end %>
-    <%= poem.favorites.count %>
-  <% end %>
+  <div class="card mb-3" style="max-width: 2000px">
+      <div class="row no-gutters">
+          <div class=" col-md-4 my-auto">
+              <%= attachment_image_tag poem, :image, format: 'jpeg', size: "370x400" %>
+          </div>
+          <div class="col-md-8">
+              <div class="text-body card-body">
+                  <p><%= poem.body %></p>
+                  <h5><%= poem.created_at.strftime("%Y-%m-%d") %></h5>
+                  <div class = "fav">
+                    <% if current_user.already_favorited?(poem) %>
+                      <%= link_to poem_favorites_path(poem), method: :delete do %>
+                        <i class="fas fa-heart"></i>
+                      <% end %>
+                      <%= poem.favorites.count %>
+                    <% else %>
+                      <%= link_to poem_favorites_path(poem), method: :post do %>
+                        <i class="far fa-heart"></i>
+                      <% end %>
+                      <%= poem.favorites.count %>
+                    <% end %>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 <% end %>
