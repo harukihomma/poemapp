@@ -28,6 +28,10 @@ group :test do
   gem 'webdrivers',         '4.1.2'
 end
 
+group :production do
+  gem 'pg', '1.1.4'
+end
+
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -35,3 +39,5 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'font-awesome-sass'
+
+gem 'psych', '~> 3.1'
