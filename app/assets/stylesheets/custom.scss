@@ -25,7 +25,14 @@
   font-family: "Hannari";
 }
 
+// body
+
+
 // poems/index, poems/show
+.space {
+  height: 70px;
+}
+
 .card {
   margin-bottom: 50px;
 }
@@ -49,6 +56,66 @@
   margin-bottom: 20px;
 }
 
+.text-body p {
+  font-family: "Hannari";
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.poem-new {
+  text-align: center;
+  font-family: "Hannari";
+  padding-top: 100px;
+}
+
+// poem/new
+.picture-space {
+  padding-left: 25%;
+  padding-bottom: 50px;
+}
+
+.picture-label {
+  padding-top: 50px;
+}
+
+// pagetop
+.button001 a {
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.button001 a:hover {
+    background: #313131;
+    color: #FFF;
+}
+.button001 a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button001 a:hover:after {
+    border-color: #FFF;
+}
+
+
 // home
 .background {
   width: 100%;
@@ -58,5 +125,49 @@
   background-size: cover;
   background-position: center;
 }
+
+.home h1 {
+  color: white;
+  font-family: "Hannari";
+  text-align: center;
+  padding-top: 50px;
+}
+.home p {
+  color: white;
+  font-family: "Hannari";
+  text-align: center;
+}
+
+.home-btn {
+  font-family: "Hannari";
+  text-align: center;
+  padding-top: 60px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white ; 
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+// registration
+
+.form-box {
+  padding-top: 50px;
+  text-align: center;
+  font-family: "Hannari";
+}
+
+.actions {
+  padding-top: 30px;
+}
+
+
 
 

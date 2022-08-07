@@ -1,21 +1,20 @@
- <div class = "background">
-  <div class = "home">
+<div class = "background">
     <% if user_signed_in? %>
-      <h1>
-          This is poem and picture servise.<br>
-           Please enjoy this application.
-      </h1>
-      
-      <%= link_to "ポエム一覧",  poems_path  %>
-      <%= link_to "ポエムを投稿",  new_poem_path  %>
+      <div class = "home">
+        <h1> にんげんと<br> 情緒と、風景と</h1>
+        <div class = "home-btn">
+          <%= link_to "詩を見る",  poems_path, class:"link" %>
+          <%= link_to "詩を書く",  new_poem_path, class:"link" %>
+        </div>
+      </div>
     <% else %>
-      <h1>This is top View .</h1>
-      <p>
-        You can see poems .<br>
-        Pleace enjoy .Thank you.
-      </p>
-    <%= link_to "登録せずにpoemを見る", poem_path %>
+      <div class = "home">
+        <h1>ようこそ。</h1>
+        <p>既存の詩を引用するなり、オリジナルを作るなり<br>自由に表現を楽しむ場です。</p>
+        <div class = "home-btn">
+          <%= link_to "登録せずに拝見", poem_path, class: "link" %>
+        </div>
+      </div>
     <% end %>
-  </div>
 </div>
 

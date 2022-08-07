@@ -1,19 +1,9 @@
-
-
-
-  
-  
-  
-
-
-  
-
-
+<div class = "space"></div>
 <% @poems.each do |poem| %>
   <div class="card mb-3" style="max-width: 2000px">
       <div class="row no-gutters">
           <div class=" col-md-4 my-auto">
-              <%= attachment_image_tag poem, :image, format: 'jpeg', size: "370x400" %>
+              <%= attachment_image_tag poem, :image, format: 'jpeg', size: "400x400" %>
           </div>
           <div class="col-md-8">
               <div class="text-body card-body">
@@ -37,3 +27,7 @@
       </div>
   </div>
 <% end %>
+<div class="button001">
+	<a href="#">最初に戻る</a>
+</div>
+
