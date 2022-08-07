@@ -13,8 +13,12 @@ class PoemsController < ApplicationController
   
   def create 
     @poem = Poem.new(poem_params)
-    @poem.save
-    redirect_to poems_path
+    if @poem.save
+      redirect_to poems_path
+    else
+      render "new"
+    end
+    
   end
   
   private
