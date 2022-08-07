@@ -36,9 +36,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-# gem "refile", require: "refile/rails", github: 'manfe/refile'
-# NOTE: refileの更新が止まっているため本来はActiveStorage等に移行すべきだが、一次対応としてやむを得ずフォークしたgemを使う
-gem "refile", require: "refile/rails", github: "JunichiIto/refile", branch: "use-env-secret-key-base"
+gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'font-awesome-sass'
 
