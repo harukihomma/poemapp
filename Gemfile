@@ -41,3 +41,7 @@ gem "refile-mini_magick"
 gem 'font-awesome-sass'
 
 gem 'psych', '~> 3.1'
+
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
