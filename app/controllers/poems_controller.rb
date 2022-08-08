@@ -23,6 +23,6 @@ class PoemsController < ApplicationController
   
   private
   def poem_params
-    params.require(:poem).permit(:body, :image)
+    params.require(:poem).permit(:id, :body, :image)
   end
 end
