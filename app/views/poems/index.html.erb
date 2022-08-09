@@ -3,7 +3,7 @@
   <div class="card mb-3" style="max-width: 2000px">
       <div class="row no-gutters">
           <div class=" col-md-4 my-auto">
-              <%= attachment_image_tag poem, :image, format: 'jpeg', size: "400x400" %>
+              <%= image_tag poem.image if poem.image.attached?  %>
           </div>
           <div class="col-md-8">
               <div class="text-body card-body">
